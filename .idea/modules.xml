@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Packliste.iml" filepath="$PROJECT_DIR$/Packliste.iml" group="Packliste" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/photomedia.iml" filepath="$PROJECT_DIR$/.idea/photomedia.iml" />
     </modules>
   </component>
 </project>
