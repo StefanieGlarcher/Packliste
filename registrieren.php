@@ -5,8 +5,10 @@ $pdo = new PDO('mysql:host=localhost;dbname=packlist', 'root', '');
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/login.css">
     <title>Registrierung</title>
 </head>
+<h1>Registrieren</h1>
 <body>
 
 <?php
@@ -63,16 +65,16 @@ if($showFormular) {
     ?>
 
     <form action="?register=1" method="post">
-        E-Mail:<br>
+        <h3>E-Mail<br></h3>
         <input type="email" size="40" maxlength="250" name="email"><br><br>
 
-        Dein Passwort:<br>
+        <h3>Dein Passwort<br></h3>
         <input type="password" size="40"  maxlength="250" name="passwort"><br>
 
-        Passwort wiederholen:<br>
+        <h3>Passwort wiederholen<br></h3>
         <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
-
-        <input type="submit" value="Abschicken">
+        <button type="submit"><strong>Senden</strong></button>
+        <p class="message">Sie sind schon registriert?<a href="login.php">Anmelden</a></p>
     </form>
 
     <?php
