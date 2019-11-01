@@ -43,7 +43,7 @@ if(isset($errorMessage)) {
     <h3>Dein Passwort<br></h3>
     <input type="password" size="40"  maxlength="250" name="passwort"><br>
     <button type="submit"><strong>Senden</strong></button>
-    <p class="message">Sie sind noch nicht registriert?<a href="login.php">Registrieren</a></p>
+    <p class="message">Sie sind noch nicht registriert?<a href="registrieren.php">Registrieren</a></p>
 </form>
 </body>
 </html>
