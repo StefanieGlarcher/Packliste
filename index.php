@@ -1,4 +1,10 @@
-<!doctype html>
+<?php
+session_start();
+$pdo = new PDO('mysql:host=localhost;dbname=packlist', 'root', '');
+
+?>
+
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
 <head>
@@ -97,50 +103,26 @@
         </div>
     </div>
 
+    <div class="photographi_area">
         <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
                         <div class="info">
-                            <p>Hallo, Herzlich Willkommen auf unserer Website. Hier können sie von einer Packliste profitierne, damit auch nicht vergessen geht!</p><br>
-
-                            <h2><span>Kleidung</span></h2><br>
-                            <input type="checkbox" name="db"><span> Hosen</span></span><br>
-                            <input type="checkbox" name="db"><span> T-Shirt</span><br>
-                            <input type="checkbox" name="db"><span> Pullover</span><br>
-                            <input type="checkbox" name="db"><span> Kurze Hosen</span><br>
-                            <input type="checkbox" name="db"><span> Jacken</span><br>
-                            <input type="checkbox" name="db"><span> Unterwäsche</span><br>
-                            <input type="checkbox" name="db"><span> Jogginghosen</span><br>
-                            <input type="checkbox" name="db"><span> Pyjama</span><br>
-                            <input type="checkbox" name="db"><span> Socken</span><br>
-                            <input type="checkbox" name="db"><span> Regenjacke</span><br>
-                            <input type="checkbox" name="db"><span> Mütze</span><br>
-                            <input type="checkbox" name="db"><span> Badesachen</span><br>
-                            <input type="checkbox" name="db"><span> Fleecepullover</span><br>
-                            <br>
-                            <h2><span>Hygiene</span></h2><br>
-                            <input type="checkbox" name="db"><span> Haarbürste</span><br>
-                            <input type="checkbox" name="db"><span> Deo</span><br>
-                            <input type="checkbox" name="db"><span> Bodylotion</span><br>
-                            <input type="checkbox" name="db"><span> Shampoo</span><br>
-                            <input type="checkbox" name="db"><span> Shower Gel</span><br>
-                            <input type="checkbox" name="db"><span> Ohrenstäbchen</span><br>
-                            <input type="checkbox" name="db"><span> Rasierer</span><br>
-                            <input type="checkbox" name="db"><span> Sonnencreme</span><br>
-                            <input type="checkbox" name="db"><span> Taschentücher</span><br>
-                            <input type="checkbox" name="db"><span> Schminkutensilien</span><br>
-                            <input type="checkbox" name="db"><span> Zahnbürste</span><br>
-                            <input type="checkbox" name="db"><span> Zahnpasta</span><br>
-                            <br>
-                            <h2><span>Papiere</span></h2><br>
-                            <input type="checkbox" name="db"><span> Hotelunterlagen</span><br>
-                            <input type="checkbox" name="db"><span> Impfausweis</span><br>
-                            <input type="checkbox" name="db"><span> Personalausweis</span><br>
-                            <input type="checkbox" name="db"><span> Flugunterlagen</span><br>
-                            <input type="checkbox" name="db"><span> Krankenversichertenkarte</span><br>
-                            <input type="checkbox" name="db"><span> Reisepass</span><br>
-                            <input type="checkbox" name="db"><span> Visum</span><br>
-                            <input type="checkbox" name="db"><span> Allergiepass</span><br>
-
+                            <p>Hallo, Herzlich Willkommen auf unserer Website. Hier können sie von einer Packliste profitierne, damit auch nicht vergessen geht!</p>
+                            <input type="checkbox" name=""><?php $con = mysqli_connect("","root");
+                            mysqli_select_db($con, "packlist");
+                            $res = mysqli_query($con, "Select * from users");
+                            while ($dsatz = mysqli_fetch_assoc($res)){
+                                echo $dsatz["bezeichung"];
+                            }mysqli_close($con);?><br>
+                            <input type="checkbox" name="db"><span>Bargeld</span></span><br>
+                            <input type="checkbox" name="db"><br>
+                            <input type="checkbox" name="db"><br>
+                            <input type="checkbox" name="db"><br>
                         </div>
+                </div>
+            </div>
+        </div>
     </div>
 
                 <!-- footer_start -->
@@ -152,8 +134,8 @@
                                     <div class="footer_info text-center">
                                         <img src="img/names.PNG" alt="">
                                         <p class="footer_text">
-                                            Explore our Packlist Website
-                                        </p>
+Explore our Packlist Website
+</p>
                                         <img src="img/koffer.PNG" alt="">
                                     </div>
                                 </div>

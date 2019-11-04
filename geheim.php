@@ -19,15 +19,21 @@ if(isset($_GET['register'])) {
     $passwort2 = $_POST['passwort2'];
 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
+        echo '<script type="text/javascript" language="Javascript"> 
+                       alert("Bitte eine gültige E-Mail-Adresse eingeben")
+                </script>';
         $error = true;
     }
     if(strlen($passwort) == 0) {
-        echo 'Bitte ein Passwort angeben<br>';
+        echo '<script type="text/javascript" language="Javascript"> 
+                       alert("Bitte ein Passwort angeben")
+                </script>';
         $error = true;
     }
     if($passwort != $passwort2) {
-        echo 'Die Passwörter müssen übereinstimmen<br>';
+        echo '<script type="text/javascript" language="Javascript"> 
+                       alert("Die Passwörter müssen übereinstimmen")
+                </script>';
         $error = true;
     }
 
@@ -38,7 +44,9 @@ if(isset($_GET['register'])) {
         $user = $statement->fetch();
 
         if($user !== false) {
-            echo 'Diese E-Mail-Adresse ist bereits vergeben<br>';
+            echo '<script type="text/javascript" language="Javascript"> 
+                       alert("Diese E-Mail-Adresse ist bereits vergeben")
+                </script>';
             $error = true;
         }
     }
@@ -51,33 +59,22 @@ if(isset($_GET['register'])) {
         $result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash));
 
         if($result) {
-            echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
+            echo '<a href="index.html"></a>';
             $showFormular = false;
         } else {
-            echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+            echo '<script type="text/javascript" language="Javascript"> 
+                       alert("Beim Abspeichern ist leider ein Fehler aufgetreten")
+                </script>';
         }
     }
 }
 
-if($showFormular) {
-    ?>
-
-    <form action="?register=1" method="post">
-        E-Mail:<br>
-        <input type="email" size="40" maxlength="250" name="email"><br><br>
-
-        Dein Passwort:<br>
-        <input type="password" size="40"  maxlength="250" name="passwort"><br>
-
-        Passwort wiederholen:<br>
-        <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
-
-        <input type="submit" value="Abschicken">
-    </form>
-
-    <?php
-} //Ende von if($showFormular)
-?>
+//if($showFormular) {
+//    ?>
+<!---->
+<!--    --><?php
+//} //Ende von if($showFormular)
+//?>
 
 </body>
 </html>

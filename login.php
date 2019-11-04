@@ -13,9 +13,12 @@ if(isset($_GET['login'])) {
     // Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
+        die('<a href="geheim.php"></a>');
+        echo "<br/><a href='logout.php'>Logout</a>";
     } else {
-        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
+        $errorMessage = "<script type=\"text/javascript\" language=\"Javascript\"> 
+                       alert(\"E-Mail oder Passwort war ungültig\")
+                </script>";
     }
 
 }

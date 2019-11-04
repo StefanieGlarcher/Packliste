@@ -26,12 +26,13 @@
 	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
 	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
 	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
+	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$subject}</td></tr>";
 	$body .= "<tr><td></td></tr>";
 	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
 	$body .= "</tbody></table>";
 	$body .= "</body></html>";
 
     $send = mail($to, $subject, $body, $headers);
+    ini_set("SMTP","flora.gashi.gf@hotmail.com");
 
 ?>

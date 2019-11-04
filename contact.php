@@ -42,14 +42,14 @@
                             </div>
                             <div class="col-xl-4 col-md-4">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="index.php">
                                         <img src="img/logo.PNG" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-md-4 d-none d-md-block">
                                 <div class="login_resiter">
-                                    <p><a href="#"><i class="flaticon-user"></i>login</a> | <a href="#">Resister</a></p>
+                                    <p><a href="login.php"><i class="flaticon-user"></i>login</a> | <a href="registrieren.php">Resister</a></p>
                                 </div>
                             </div>
                         </div>
@@ -62,9 +62,9 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="index.php">Home</a></li>
                                             <li><a href="about.html">About</a></li>
-                                            <li><a class="active" href="contact.html">Contact</a></li>
+                                            <li><a class="active" href="contact.php">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -141,7 +141,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Name"></textarea>
+                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" ..."></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -217,9 +217,9 @@
                             <div class="col-xl-12">
                                 <div class="footer_links text-center">
                                     <ul>
-                                        <li><a href="index.html">home</a></li>
+                                        <li><a href="index.php">home</a></li>
                                         <li><a href="about.html">about</a></li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="contact.php">contact</a></li>
                                     </ul>
                                 </div>
                             </div>
